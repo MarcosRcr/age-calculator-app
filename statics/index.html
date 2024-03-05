@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Frontend Mentor | Age calculator app</title>
+    </head>
+    <body>
+      <script src="./main.js"></script>
+        <main class="age-calculator">
+            <form>
+                <div class="inputs_age">
+                    <div class="day_input">
+                        <label for="day">DAY</label>
+                        <input name="day" id="day" placeholder="DD"  required/>
+                    </div>
+                    <div class="month_input">
+                        <label for="month">MONTH</label>
+                        <input name="month" id="month" placeholder="MM" required />
+                    </div>
+                    <div class="year_input">
+                        <label for="year">YEAR</label>
+                        <input name="year" id="year" placeholder="YYYY" required />
+                    </div>
+                </div>
+                <div class="submit-section">
+                    <hr/>
+                    <button type="submit" class="btn-submit" id="calculate">
+                        <img
+                            src="../assets/images/icon-arrow.svg"
+                            alt="Button submit"
+                        />
+                    </button>
+                </div>
+            </form>
+            <div class="total-age">
+                <h2><span id="total-year" class="total-years">--</span> years</h2>
+                <h2><span id="total-months" class="total-months">--</span> months</h2>
+                <h2><span id="total-days" class="total-days">--</span> days</h2>
+            </div>
+        </main>
+        <footer class="footer">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="#">Marcos Cuellar</a>.
+        </footer>
+    </body>
+</html>

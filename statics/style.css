@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+:root {
+    /* Layout width */
+    --size-mobile: 375px;
+    --size-desktop: 1440px;
+    /* Prymary colors */
+    --main-purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+
+    /* Neutral colors */
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+
+    /* Typography */
+    --font-family: "Poppins", sans-serif;
+    --input-font-size: 32px;
+}
+
+/* Reset */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+body{
+    font-family: var(--font-family);
+    background-color: var(--Off-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.25rem;
+    height: 100vh;
+}
+
+/* Global styles */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    color: var(--Off-black);
+}
+
+a{
+    text-decoration: none;
+}
+
+/*Age calculator*/
+
+.age-calculator{
+    background-color: var(--White);
+    width: 50rem;
+    height: 30rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 20px 20px 20% 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.inputs_age{
+    display: flex;
+    gap: 1rem;
+}
+
+.inputs_age input{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: 1px solid var(--Light-grey);
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.inputs_age label{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--Smokey-grey);
+}
+.submit-section{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 2rem;
+}
+.submit-section hr{
+    width: 85%;
+    border: 1px solid var(--Light-grey);
+}
+
+.btn-submit{
+    border-radius: 50%;
+    border: none;
+    background-color: var(--main-purple);
+    margin-top: 0.5rem;
+    width: 4rem;
+    height: 4rem;
+}
+.btn-submit:hover{
+    background-color: var(--Off-black);
+    cursor: pointer;
+}
+
+
+.total-age{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
+}
+.total-age span{
+    color: var(--main-purple);
+    letter-spacing: 1rem;
+}
+
+/*Media queries*/
+
+/* Mobile Styles */
+@media only screen and (max-width: var(--size-mobile)) {
+    .age-calculator {
+        width: 90vw;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .inputs_age {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .submit-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .btn-submit {
+        margin-top: 0;
+    }
+
+    .total-age {
+        font-size: 1.2rem;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: var(--size-mobile)) and (max-width: var(--size-desktop)) {
+    .age-calculator {
+        width: 70vw;
+        height: auto;
+        padding: 2.5rem;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: var(--size-desktop)) {
+    .age-calculator {
+        width: 50rem;
+        height: 30rem;
+    }
+}
+
